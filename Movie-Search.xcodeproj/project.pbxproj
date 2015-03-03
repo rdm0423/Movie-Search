@@ -16,6 +16,8 @@
 		23D17DAD1AA65AEE00FB4641 /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 23D17DA21AA65AEE00FB4641 /* AFURLRequestSerialization.m */; };
 		23D17DAE1AA65AEE00FB4641 /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 23D17DA41AA65AEE00FB4641 /* AFURLResponseSerialization.m */; };
 		23D17DAF1AA65AEE00FB4641 /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 23D17DA61AA65AEE00FB4641 /* AFURLSessionManager.m */; };
+		23D17DB21AA65CCE00FB4641 /* NetworkController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23D17DB11AA65CCE00FB4641 /* NetworkController.m */; };
+		23D17DB51AA65EA000FB4641 /* API.m in Sources */ = {isa = PBXBuildFile; fileRef = 23D17DB41AA65EA000FB4641 /* API.m */; };
 		7167C6C81952460600FD8F55 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7167C6C71952460600FD8F55 /* Foundation.framework */; };
 		7167C6CA1952460600FD8F55 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7167C6C91952460600FD8F55 /* CoreGraphics.framework */; };
 		7167C6CC1952460600FD8F55 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7167C6CB1952460600FD8F55 /* UIKit.framework */; };
@@ -66,6 +68,10 @@
 		23D17DA41AA65AEE00FB4641 /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLResponseSerialization.m; sourceTree = "<group>"; };
 		23D17DA51AA65AEE00FB4641 /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLSessionManager.h; sourceTree = "<group>"; };
 		23D17DA61AA65AEE00FB4641 /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
+		23D17DB01AA65CCE00FB4641 /* NetworkController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkController.h; sourceTree = "<group>"; };
+		23D17DB11AA65CCE00FB4641 /* NetworkController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkController.m; sourceTree = "<group>"; };
+		23D17DB31AA65EA000FB4641 /* API.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = API.h; sourceTree = "<group>"; };
+		23D17DB41AA65EA000FB4641 /* API.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = API.m; sourceTree = "<group>"; };
 		7167C6C41952460600FD8F55 /* Movie-Search.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Movie-Search.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7167C6C71952460600FD8F55 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		7167C6C91952460600FD8F55 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -191,6 +197,10 @@
 				7167C70419524BC700FD8F55 /* MSMovieDetailViewController.xib */,
 				7167C70D19525B6500FD8F55 /* MovieController.h */,
 				7167C70E19525B6500FD8F55 /* MovieController.m */,
+				23D17DB01AA65CCE00FB4641 /* NetworkController.h */,
+				23D17DB11AA65CCE00FB4641 /* NetworkController.m */,
+				23D17DB31AA65EA000FB4641 /* API.h */,
+				23D17DB41AA65EA000FB4641 /* API.m */,
 				7167C6DF1952460600FD8F55 /* Images.xcassets */,
 				7167C6CE1952460600FD8F55 /* Supporting Files */,
 			);
@@ -331,12 +341,14 @@
 				23D17DAA1AA65AEE00FB4641 /* AFNetworkReachabilityManager.m in Sources */,
 				7167C70F19525B6500FD8F55 /* MovieController.m in Sources */,
 				23D17DAC1AA65AEE00FB4641 /* AFURLConnectionOperation.m in Sources */,
+				23D17DB51AA65EA000FB4641 /* API.m in Sources */,
 				23D17DA91AA65AEE00FB4641 /* AFHTTPSessionManager.m in Sources */,
 				23D17DAD1AA65AEE00FB4641 /* AFURLRequestSerialization.m in Sources */,
 				7167C70519524BC700FD8F55 /* MSMovieDetailViewController.m in Sources */,
 				7167C7011952498600FD8F55 /* MSResponseTableViewDataSource.m in Sources */,
 				7167C6D41952460600FD8F55 /* main.m in Sources */,
 				23D17DA81AA65AEE00FB4641 /* AFHTTPRequestOperationManager.m in Sources */,
+				23D17DB21AA65CCE00FB4641 /* NetworkController.m in Sources */,
 				23D17DAB1AA65AEE00FB4641 /* AFSecurityPolicy.m in Sources */,
 				23D17DAE1AA65AEE00FB4641 /* AFURLResponseSerialization.m in Sources */,
 				23D17DA71AA65AEE00FB4641 /* AFHTTPRequestOperation.m in Sources */,
