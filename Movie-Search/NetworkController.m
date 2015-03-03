@@ -9,6 +9,8 @@
 #import "NetworkController.h"
 #import "API.h"
 
+
+
 @implementation NetworkController
 
 + (AFHTTPSessionManager *)api{
@@ -25,9 +27,10 @@
 + (NSDictionary *)parametersWithAPIKey:(NSDictionary *)parameters {
     
     NSMutableDictionary *parametersWithKey = [[NSMutableDictionary alloc] initWithDictionary:parameters];
-    [parametersWithKey setObject:apiKey forKey:@"api_key"];
+    [parametersWithKey setObject:API_KEY forKey:@"api_key"];
     
     return parametersWithKey;
 }
+
 
 @end

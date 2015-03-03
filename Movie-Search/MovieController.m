@@ -26,6 +26,7 @@
     
     [[NetworkController api] GET:@"search/movie" parameters:[NetworkController parametersWithAPIKey:@{@"query": name}] success:^(NSURLSessionDataTask *task, id responseObject) {
         self.resultMovies = responseObject[@"results"];
+        completion(YES);
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
         completion(NO);
     }];

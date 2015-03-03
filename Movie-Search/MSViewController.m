@@ -39,6 +39,7 @@
             [self.tableView reloadData];
             
         } else{
+            //depricated
             [[[UIAlertView alloc]initWithTitle:@"Failed to search" message:@"The request failed" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil] show];
         }
     }];
