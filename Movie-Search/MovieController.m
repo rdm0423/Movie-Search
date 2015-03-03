@@ -7,6 +7,7 @@
 //
 
 #import "MovieController.h"
+#import "NetworkController.h"
 
 @implementation MovieController
 
@@ -21,4 +22,13 @@
     
 }
 
+- (void)fetchMovieWithName:(NSString *)name completion:(void (^)(BOOL success))completion{
+    
+    [[NetworkController api] GET:@"search/movie" parameters:[NetworkController parametersWithAPIKey:@{@"query": name}] success:^(NSURLSessionDataTask *task, id responseObject) {
+        self.resultMovies = responseObject[@"results"];
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+        completion(NO);
+    }];
+    
+}
 @end
