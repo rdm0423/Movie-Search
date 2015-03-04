@@ -10,6 +10,7 @@
 #import "MSResponseTableViewDataSource.h"
 #import "MSMovieDetailViewController.h"
 #import "MovieController.h"
+#import "UIImageView+AFNetworking.h"
 
 @interface MSViewController () <UITableViewDelegate>
 
@@ -47,11 +48,30 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    NSDictionary *movie = [MovieController sharedInstance].resultMovies[indexPath.row];
+    [MovieController sharedInstance].movieString = movie[@"title"];
+    [MovieController sharedInstance].releaseString = movie[@"release_date"];
+    [MovieController sharedInstance].ratingString = movie[@"vote_average"];
+    UIImageView *imageViewPassage = [UIImageView new];
+    [imageViewPassage setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://image.tmdb.org/t/p/w92/%@", movie[@"poster_path"]]]];
+    [MovieController sharedInstance].posterImage = imageViewPassage;
+
+
     
-    MSMovieDetailViewController *detailViewController = [MSMovieDetailViewController new];
-    [self.navigationController pushViewController:detailViewController animated:YES];
+    NSLog(@"%@", [MovieController sharedInstance].movieString);
+    
+    [self performSegueWithIdentifier:@"detailSegue" sender:nil];
 }
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    MSMovieDetailViewController *movieViewController = segue.destinationViewController;
+    
+    //    if ([segue.identifier isEqualToString:@"detailSegue"]) {
+    //
+    //    }
+}
+
+
 
 @end

@@ -7,8 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "UIImageView+AFNetworking.h"
 
 @interface MovieController : NSObject
+
+@property (nonatomic,strong) NSString *movieString;
+@property (nonatomic,strong) NSString *releaseString;
+@property (nonatomic,strong) NSDecimalNumber *ratingString;
+@property (nonatomic,strong) NSString *descriptionString;
+@property (nonatomic,strong) UIImageView *posterImage;
 
 + (MovieController *)sharedInstance;
 - (void)fetchMovieWithName:(NSString *)name completion:(void (^)(BOOL success))completion;

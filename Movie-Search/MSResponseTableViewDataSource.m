@@ -8,10 +8,13 @@
 
 #import "MSResponseTableViewDataSource.h"
 #import "MovieController.h"
+#import "UIImageView+AFNetworking.h"
+
+#import "MSMovieDetailViewController.h"
 
 static NSString * const cellReuseKey = @"cell";
 
-@interface MSResponseTableViewDataSource () 
+@interface MSResponseTableViewDataSource ()
 
 @end
 
@@ -22,22 +25,23 @@ static NSString * const cellReuseKey = @"cell";
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-
+    
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellReuseKey];
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellReuseKey];
     }
     
     NSDictionary *movie = [MovieController sharedInstance].resultMovies[indexPath.row];
-    cell.textLabel.text = movie[@"title"];
     
+    cell.textLabel.text = movie[@"title"];
     cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ - %@", movie[@"release_date"], movie[@"vote_average"]];
     
-
-//setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://image.tmdb.org/t/p/w92/%@", movie[@"poster_path"]]]];
+    [cell.imageView setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://image.tmdb.org/t/p/w92/%@", movie[@"poster_path"]]]];
+    
     
     return cell;
 }
+
 
 
 @end
